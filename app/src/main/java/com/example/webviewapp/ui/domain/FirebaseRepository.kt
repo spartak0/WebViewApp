@@ -3,5 +3,5 @@ package com.example.webviewapp.ui.domain
 import kotlinx.coroutines.flow.Flow
 
 interface FirebaseRepository {
-    suspend fun fetchUrl(): Flow<NetworkResult<String>>
+    suspend fun fetchUrl(): Flow<Result<String>>
 }

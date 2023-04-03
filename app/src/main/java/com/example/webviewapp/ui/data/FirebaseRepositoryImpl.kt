@@ -1,7 +1,8 @@
 package com.example.webviewapp.ui.data
 
+import android.util.Log
 import com.example.webviewapp.ui.domain.FirebaseRepository
-import com.example.webviewapp.ui.domain.NetworkResult
+import com.example.webviewapp.ui.domain.Result
 import com.example.webviewapp.ui.utils.Constants
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
@@ -20,13 +21,14 @@ class FirebaseRepositoryImpl : FirebaseRepository {
         remoteConfig.setConfigSettingsAsync(configSettings)
     }
 
-    override suspend fun fetchUrl(): Flow<NetworkResult<String>> = flow {
-        emit(NetworkResult.Loading())
+    override suspend fun fetchUrl(): Flow<Result<String>> = flow {
+        emit(Result.Loading())
         try {
             remoteConfig.fetchAndActivate().await()
-            emit(NetworkResult.Success(remoteConfig.getString(Constants.URL)))
+            emit(Result.Success(remoteConfig.getString(Constants.URL)))
         } catch (e: Exception) {
-            emit(NetworkResult.Error(e.message))
+            Log.d("AAA", "fetchUrl: ${e.message}")
+            emit(Result.Error(e.message))
         }
     }
 }
