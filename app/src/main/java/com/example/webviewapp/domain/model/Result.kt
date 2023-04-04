@@ -1,4 +1,4 @@
-package com.example.webviewapp.ui.domain
+package com.example.webviewapp.domain.model
 
 sealed class Result<T>(
     val data: T? = null,

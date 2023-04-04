@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WebViewApp</string>
+    <string name="no_internet_connection">No internet connection,\nplease try again later.</string>
+    <string name="play_again">Play again</string>
+    <string name="menu">Menu</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="clear_leaderboard">Clear leaderboard</string>
+    <string name="play">Play</string>
+    <string name="rules">Hit as many moles as you can in 30 seconds</string>
 </resources>

@@ -1,9 +1,9 @@
-package com.example.webviewapp.ui.data
+package com.example.webviewapp.data.repository
 
 import android.util.Log
-import com.example.webviewapp.ui.domain.FirebaseRepository
-import com.example.webviewapp.ui.domain.Result
-import com.example.webviewapp.ui.utils.Constants
+import com.example.webviewapp.domain.repository.FirebaseRepository
+import com.example.webviewapp.domain.model.Result
+import com.example.webviewapp.utils.Constants
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings

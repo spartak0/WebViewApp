@@ -1,9 +1,9 @@
-package com.example.webviewapp.ui.utils
+package com.example.webviewapp.utils
 
 import android.content.Context
 import android.content.SharedPreferences
 
-class SharedPrefHandler(private val context: Context) {
+class SharedPrefHandler(context: Context) {
     private val settings: SharedPreferences =
         context.getSharedPreferences(Constants.SHARED_PREF, Context.MODE_PRIVATE)
 
